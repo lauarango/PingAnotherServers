@@ -1,9 +1,12 @@
 #!/bin/bash
 
-ping -c1 google.com &> /dev/null
+host_ips="host_ip_list"
+for ip in $(cat host_ip_list)
+do
+  ping -c1 $host_ips &> /dev/null
   if [ $? -eq 0 ]; then
-  echo Good Network Connectivity
+  echo "$host_ips Good Network Connectivity"
   else
-  echo Bad Network Connectivity
+  echo "$host_ips Bad Network Connectivity"
   fi
   
