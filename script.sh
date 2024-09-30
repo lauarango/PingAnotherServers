@@ -9,4 +9,4 @@ do
   else
   echo "$ip Bad Network Connectivity"
   fi
-  
+done
